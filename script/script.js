@@ -23,7 +23,7 @@ form1.addEventListener("submit", function(event) {
 	console.log(data);
 	var name = document.getElementById("name").value;
 	var lastName = document.getElementById("input-lastName").value;
-	const block = document.getElementById('response_div')
-	block.innerHTML = name; 
+	document.getElementById("getName").value = name;
+	document.getElementById("getLastName").value = lastName;
 });
 
