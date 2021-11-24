@@ -14,6 +14,7 @@ function obtenerDatos() {
 	return r;
 }
 
+
 form1.addEventListener("submit", function(event) {
 	event.preventDefault();
 
