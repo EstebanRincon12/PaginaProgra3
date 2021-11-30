@@ -28,3 +28,8 @@ form1.addEventListener("submit", function(event) {
 	document.getElementById("getLastName").value = lastName;
 });
 
+function changeColor(elemId){
+	var elem = document.getElementById(elemId);
+	elem.style.borderColor = "gray";
+}
+
