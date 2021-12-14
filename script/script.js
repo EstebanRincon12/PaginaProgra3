@@ -1,23 +1,23 @@
 console.log("Script loaded!");
-var form1 = document.getElementById("form-1");
-
+var form1 = document.getElementById("form");
+let list = ["Lista de usarios:"];
+var counter = 1;
 
 function obtenerDatos() {
-	
+	var name = document.getElementById("name").value;	
 	var lastName = document.getElementById("input-lastName").value;
-	var number = document.getElementById("input-number").value;
-	var direction = document.getElementById("input-direction").value;
 	var birth = document.getElementById("input-birth").value;
-	var est = document.getElementById("input-est").value;
-
-	var r =[lastName, number, direction, birth,est];
-	return r;
+	var person = name + "," + lastName + ","+ birth;
+	list.push(person);
+	console.log(list);
+	window.localStorage.setItem("persona " + counter, list[list.length -1]);
+	document.getElementById("form").reset();
+	counter++;
 }
 
 
 form1.addEventListener("submit", function(event) {
 	event.preventDefault();
-
 	const data = Object.fromEntries(new FormData(event.target).entries());
 	console.log(event);
 	console.log("submit");
